@@ -16,6 +16,7 @@
 
 package com.example.xyzreader.ui;
 
+import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
@@ -101,6 +102,7 @@ public class DrawInsetsFrameLayout extends FrameLayout {
     }
 
     @Override
+    @TargetApi(20)
     public WindowInsets onApplyWindowInsets(WindowInsets insets) {
         insets = super.onApplyWindowInsets(insets);
         mInsets = new Rect(

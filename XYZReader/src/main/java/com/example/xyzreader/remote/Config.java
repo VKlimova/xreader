@@ -16,7 +16,6 @@ public class Config {
         } catch (MalformedURLException e) {
             // TODO: throw a real error
             Log.e(TAG, "Please check your internet connection: " + e.toString());
-
         }
 
         BASE_URL = url;
