@@ -56,10 +56,19 @@ public class ArticleListActivity extends AppCompatActivity implements
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_article_list);
+        Log.i("xyzlog", "1 ");
+        try {
+        setContentView(R.layout.activity_article_list);}
+        catch (Exception e) {
+            Log.i("xyzlog", "Layout Exception "+ e.toString());
+        }
+        Log.i("xyzlog", "2 ");
         mSwipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_refresh_layout);
+        Log.i("xyzlog", "3 ");
         mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+        Log.i("xyzlog", "4 ");
         getLoaderManager().initLoader(0, null, this);
+        Log.i("xyzlog", "5 ");
         if (savedInstanceState == null) {
             refresh();
         }
