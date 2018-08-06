@@ -12,7 +12,6 @@
     <dimen name="up_button_size">56dp</dimen>
     <dimen name="list_item_cardview_margin">4dp</dimen>
     <dimen name="list_item_title_padding">8dp</dimen>
-    <dimen name="list_item_article_title_maxlines">4</dimen>
-    <dimen name="list_item_article_subtitle_maxlines">2</dimen>
+]
 
 </resources>

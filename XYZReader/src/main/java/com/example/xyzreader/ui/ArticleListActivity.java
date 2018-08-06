@@ -9,7 +9,7 @@ import android.content.Loader;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
-//import android.support.v7.app.ActionBarActivity;
+
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
@@ -17,8 +17,6 @@ import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.text.format.DateUtils;
 import android.util.Log;
-import android.util.TypedValue;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -56,19 +54,10 @@ public class ArticleListActivity extends AppCompatActivity implements
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.i("xyzlog", "1 ");
-        try {
-        setContentView(R.layout.activity_article_list);}
-        catch (Exception e) {
-            Log.i("xyzlog", "Layout Exception "+ e.toString());
-        }
-        Log.i("xyzlog", "2 ");
+        setContentView(R.layout.activity_article_list);
         mSwipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_refresh_layout);
-        Log.i("xyzlog", "3 ");
         mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
-        Log.i("xyzlog", "4 ");
         getLoaderManager().initLoader(0, null, this);
-        Log.i("xyzlog", "5 ");
         if (savedInstanceState == null) {
             refresh();
         }

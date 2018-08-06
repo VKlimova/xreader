@@ -17,15 +17,14 @@
 
 <resources>
     <color name="photo_placeholder">#ccc</color>
-<color name="artile_body_color">#000000</color>
-    <color name="theme_primary">#04561A</color>
-    <color name="theme_primary_dark">#04561A</color>
-    <color name="theme_accent">#04561A</color>
+    <color name="artile_body_color">#000000</color>
+    <color name="theme_primary">#6000</color>
+    <color name="theme_primary_dark">#6000</color>
+    <color name="theme_accent">#6000</color>
     <color name="ltgray">#ffe0e0e0</color>
-    <color name ="article_title">#fff</color>
+    <color name="article_title">#fff</color>
     <color name="article_byline">#8fff</color>
     <color name="detail_header_bg">#fff</color>
     <color name="meta_bar_bg">#333</color>
     <color name="list_item_subtitle_text">#6000</color>
-
 </resources>
