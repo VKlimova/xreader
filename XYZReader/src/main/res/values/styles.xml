@@ -58,10 +58,8 @@
         <item name="android:textSize">@dimen/detail_body_text_size</item>
         <item name="android:fontFamily">sans-serif</item>
     </style>
-    <style name="list_item_subtitle_text" parent="@style/TextAppearance.AppCompat.Body1">
-        <item name="android:paddingBottom">@dimen/list_item_title_padding</item>
-        <item name="android:paddingTop">@dimen/list_item_title_padding</item>
+
+    <style name="list_item_subtitle_text">
         <item name="android:textColor">@color/list_item_subtitle_text</item>
     </style>
-
 </resources>
