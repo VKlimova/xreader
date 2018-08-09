@@ -20,6 +20,7 @@ import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.ShareCompat;
+import android.support.v7.app.ActionBar;
 import android.support.v7.graphics.Palette;
 import android.text.Html;
 import android.text.format.DateUtils;
@@ -97,6 +98,10 @@ public class ArticleDetailFragment extends Fragment implements
         mStatusBarFullOpacityBottom = getResources().getDimensionPixelSize(
                 R.dimen.detail_card_top_margin);
         setHasOptionsMenu(true);
+
+
+
+
     }
 
     public ArticleDetailActivity getActivityCast() {
@@ -210,15 +215,17 @@ public class ArticleDetailFragment extends Fragment implements
         bylineView.setMovementMethod(new LinkMovementMethod());
         TextView bodyView = (TextView) mRootView.findViewById(R.id.article_body);
 
-
 //        bodyView.setTypeface(Typeface.createFromAsset(getResources().getAssets(), "Rosario-Regular.ttf"));
 
         if (mCursor != null) {
-            mRootView.setAlpha(0);
+//            mRootView.setAlpha(0);
             mRootView.setVisibility(View.VISIBLE);
-            mRootView.animate().alpha(1);
-            titleView.setText(mCursor.getString(ArticleLoader.Query.TITLE));
-            CollapsingToolbarLayout collapsingToolbarLayout = (CollapsingToolbarLayout) mRootView.findViewById (R.id.collapsing_toolbar);
+//            mRootView.animate().alpha(1);
+            String title = mCursor.getString(ArticleLoader.Query.TITLE);
+            titleView.setText(title);
+            ((ArticleDetailActivity) getActivity()).setActionBarTitle(title);
+
+//            CollapsingToolbarLayout collapsingToolbarLayout = (CollapsingToolbarLayout) mRootView.findViewById (R.id.collapsing_toolbar);
 
 //            Toolbar mToolbar = mRootView.findViewById(R.id.toolbar);
 //            mToolbar.setTitle(mCursor.getString(ArticleLoader.Query.TITLE));
@@ -259,8 +266,8 @@ public class ArticleDetailFragment extends Fragment implements
                                 mPhotoView.setImageBitmap(imageContainer.getBitmap());
 //                                mRootView.findViewById(R.id.meta_bar)
 //                                        .setBackgroundColor(mMutedColor);
-                                mRootView.findViewById(R.id.toolbar)
-                                        .setBackgroundColor(mMutedColor);
+//                                mRootView.findViewById(R.id.toolbar)
+//                                        .setBackgroundColor(mMutedColor);
                                 updateStatusBar();
                                 Log.i(TAG, "Color = " + mMutedColor);
                                 FloatingActionButton fab = mRootView.findViewById(R.id.share_fab);
