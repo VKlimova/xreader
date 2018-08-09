@@ -23,7 +23,7 @@
     <color name="theme_accent">#6000</color>
     <color name="ltgray">#ffe0e0e0</color>
     <color name="article_title">#fff</color>
-    <color name="article_byline">#8fff</color>
+    <color name="article_byline">#6000</color>
     <color name="detail_header_bg">#fff</color>
     <color name="meta_bar_bg">#333</color>
     <color name="list_item_subtitle_text">#6000</color>
